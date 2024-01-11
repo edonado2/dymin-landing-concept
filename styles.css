@@ -1,0 +1,287 @@
+
+.container-main-text{
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+div > .card{
+    padding: 50px;
+    transition: transform .1s; /* Animation */
+    margin: 0 auto;
+    border: none;
+    gap: 20px;
+}
+div > .card:hover{
+    transform: scale(1.1);
+    background-color: #00308F;
+    color: #fff;
+}
+.sub-header{
+    font-size: small;
+    text-align: center;
+    padding: 30px;
+}
+li{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 15x;
+    display: flex;
+    justify-content: space-between;
+}
+
+.bussiness-support-text{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 30px;
+    padding: 20px;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.content-section {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.text-column {
+    flex: 1;
+    padding: 0 20px;
+    text-align: center; /* center the text on mobile */
+}
+
+.image-column {
+    flex: 1;
+    text-align: center; /* center the image on mobile */
+}
+
+img {
+    max-width: 100%; /* ensure the image doesn't overflow its container on smaller screens */
+}
+
+
+@media (max-width: 768px) {
+    .content-section {
+        flex-direction: column;
+    }
+    .text-column, .image-column {
+        flex: none;
+        width: 100%; /* make the columns occupy the full width on smaller screens */
+        padding: 0; /* remove padding on smaller screens */
+        text-align: left; /* reset text alignment to left for smaller screens */
+    }
+}
+.container-badges{
+    display: flex;
+    justify-content: center;
+    padding: 100px;
+}
+
+.contact {
+
+    padding: 50px;
+}
+
+:root {
+    --primary: rgba(255,255,255,0.85);
+    --light: rgba(255,255,255,0.5);
+    --accent: rgb(86, 177, 187);
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  main {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--accent);
+  
+    & nav {
+      position: fixed;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      padding: 1rem; 
+  
+      & .logo { font-size: 1.25rem;  } 
+      & .menu { font-size: 1.5rem; }
+    }
+  
+    & > header {
+      position: relative;
+      height: 70vh;
+      display: grid;
+      align-content: center;
+      text-align: center;
+      gap: 0.5rem;
+      font: 1rem helvetica,sans-serif;
+  
+      & p {
+        font-size: 0.8rem;
+        font-style: italic;
+      }
+  
+      & span {
+        position: absolute;
+        bottom: 2rem;
+        left: 50%;
+        transform: translateY(-50%);
+        width: 13px;
+        height: 13px;
+        background-color: black;
+        border-radius: 50%;
+  
+        &::before, &::after {
+          content: '';
+          position: absolute;
+          width: 11px;
+          height: 11px;
+          border: 1px solid black;
+          border-radius: 50%;
+          cursor: pointer;
+        }
+  
+        &::before { left: -18px; }
+        &::after  { left: 18px; }
+      }
+    }
+  }
+  
+  footer {
+    z-index: 0;
+    width: 100%;
+    background-color: black;
+    font: 0.75rem helvetica,sans-serif;
+    color: var(--light);
+    display: flex;
+    justify-content: center;
+    padding: 3rem 8%;
+  
+    & header {
+      width: 100%;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      color: var(--primary);
+      padding: 0 2rem;
+  
+      & h2 {
+        position: relative;
+        text-transform: uppercase;
+  
+        &::before {
+          content: '';
+          position: absolute;
+          transform: translate(-0.5rem,-0.25rem);
+          width: 1rem;
+          height: 1rem;
+          background-color: var(--accent);
+          z-index: -1;
+        }
+      }
+  
+      & p {
+        font-style: italic;
+        line-height: 1.8;
+        color: var(--light);
+      }
+  
+      & .icon {
+        font-size: 1.1rem;
+        padding: 0.25rem 0.5rem 0.25rem 0;
+        cursor: pointer;
+        color: var(--accent);
+  
+        &:hover {
+          animation: pulse 0.5s;
+          color: var(--light);
+        }
+      }
+    }
+  
+    & aside {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      gap: 3rem;
+      padding: 0 2rem;
+  
+      & ul {
+        list-style-type: none;
+  
+        & li {
+          padding: 0.5rem 0;
+          cursor: pointer;
+          
+          &:hover:not(:first-of-type) {
+            animation: pulse 0.5s;
+            color: var(--accent);
+          }
+        }
+  
+        & li:first-of-type {
+          color: var(--primary);
+          cursor: default;
+        }
+      }
+    }
+  }
+  
+  @keyframes pulse {
+    0%,100% {
+      transform: translate(0);
+    }
+    50% {
+      transform: translate(-0.1rem,-0.25rem);
+    }
+  }
+  
+  @media (max-width:800px) {
+    footer {
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+  }
+
+  .footer-home{
+    padding: 20px;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 10px;
+  }
+
+  .navbar{
+    padding: 50px;
+  }
+  
+  .fade-in-text {
+    opacity: 0; /* Initially, set the opacity to 0 so that the text is hidden */
+    transition: opacity 1s; /* Apply a smooth transition effect */
+  }
+  
+  .fade-in-text.show {
+    opacity: 1; /* When the 'show' class is added, the text will fade in */
+  }
+
+  .card:hover{
+    cursor: pointer;
+  }
+
+  .testimonial-card .card-up {
+    height: 120px;
+    overflow: hidden;
+    border-top-left-radius: 0.25rem;
+    border-top-right-radius: 0.25rem;
+  }
+  .testimonial-card .avatar {
+    width: 110px;
+    margin-top: -60px;
+    overflow: hidden;
+    border: 3px solid #fff;
+    border-radius: 50%;
+  }
